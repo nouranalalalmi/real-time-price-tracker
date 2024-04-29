@@ -48,7 +48,6 @@ To run the project locally, follow these steps:
    yarn dev
    ```
 5. Open your browser and visit http://localhost:3000 to view the application.
-   
 
 ### How to Use
    1. Home page: you'll see a list of available cryptocurrencies to track.
@@ -56,9 +55,29 @@ To run the project locally, follow these steps:
    
    2. Details page.
    Prices will be updated in real-time using WebSocket.
-   
-### Testing
+
+### Contributing
+
+#### Testing
    To run unit tests, use the following command:
    ```
     yarn test
+   ```
+
+#### GitHub Workflows
+
+This project uses GitHub Actions for continuous integration (CI) and continuous deployment (CD). The workflows are defined in the `.github/workflows` directory.
+
+The CI workflow runs whenever a new commit is pushed to the repository. It checks out the code, installs the dependencies, and runs the tests.
+
+The CD workflow runs whenever changes are merged into the main branch. It performs the same steps as the CI workflow, and if the tests pass, it deploys the application.
+
+#### Signing Commits
+
+This project uses GPG-signed commits for enhanced security and authenticity. To sign your commits, you'll need to [generate a GPG key](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key) and [tell Git about your signing key](https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key).
+
+Once you've set up your GPG key, you can sign your commits by adding the `-S` option to the `git commit` command:
+
+```
+git commit -S -m "Your commit message"
 ```
