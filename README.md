@@ -31,31 +31,34 @@ To run the project locally, follow these steps:
 
 1. Clone the repository:
 
-   ```bash
-   git clone <repository-url>
-   Navigate to the project directory:
-   bash
-   Copy code
-   cd real-time-price-tracker
-   Install dependencies:
-   bash
-   Copy code
-   yarn install
-   Start the development server:
-   bash
-   Copy code
-   yarn dev
-   Open your browser and visit http://localhost:3000 to view the application.
-   How to Use
-   On the Home page, you'll see a list of available cryptocurrencies to track.
-   Click on a cryptocurrency to view its real-time price and historical price trend on the Details page.
-   Prices will be updated in real-time using WebSocket.
-   Testing
-   To run unit tests, use the following command:
+   ```
+   git clone <https://github.com/nouranalalalmi/real-time-price-tracker.git>
    ```
 
-bash
-Copy code
-yarn test
-Deployment
-This project is not intended for production use. It's a take-home assignment for demonstrating technical skills and understanding of React, APIs, WebSockets, and unit testing.
+2. Navigate to the project directory:
+    ```
+   cd real-time-price-tracker
+   ```
+3. Install dependencies:
+    ```
+    yarn install
+    ```
+4. Start the development server:
+    ```
+   yarn dev
+   ```
+5. Open your browser and visit http://localhost:3000 to view the application.
+   
+
+### How to Use
+   1. On the Home page, you'll see a list of available cryptocurrencies to track.
+   Click on a cryptocurrency to view its real-time price and historical price trend on the 
+   
+   2. Details page.
+   Prices will be updated in real-time using WebSocket.
+   
+### Testing
+   To run unit tests, use the following command:
+   ```
+    yarn test
+   ```
