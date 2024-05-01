@@ -16,10 +16,27 @@ jobs:
         run: |
           npm install jest@29.7.0
 
-      - name: Run Jest
-        run: npx jest --ci --coverage .
-          --config jest.config.ts
-        continue-on-error: true
+          - name: Run Jest
+          id: jest
+          run: |
+            OUTPUT=$(npx jest --ci --coverage . --config jest.config.ts)
+            echo "::set-output name=coverage::$OUTPUT"
+
+      - name: Create comment
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const output = `${{ steps.jest.outputs.coverage }}`
+            const issue_number = context.issue.number
+            const owner = context.repo.owner
+            const repo = context.repo.repo
+            github.rest.issues.createComment({
+              owner: owner,
+              repo: repo,
+              issue_number: issue_number,
+              body: output
+            })
 
       - name: Upload JUnit report
         uses: mikepenz/action-junit-report@v2
@@ -33,21 +50,3 @@ jobs:
         if: always()
         with:
           files: junit.xml
-
-      - name: Jest Coverage Comment 1
-        uses: MishaKav/jest-coverage-comment@main
-
-      - name: Jest Coverage Comment
-        uses: MishaKav/jest-coverage-comment@main
-        with:
-          coverage-summary-path: ./coverage/coverage-summary.json
-          title: My Jest Coverage Comment
-          summary-title: My Summary Title
-          badge-title: Coverage
-          hide-comment: false
-          create-new-comment: false
-          hide-summary: false
-          junitxml-title: My JUnit Title
-          junitxml-path: junit.xml
-          coverage-title: My Coverage Title
-          coverage-path: coverage.txt
