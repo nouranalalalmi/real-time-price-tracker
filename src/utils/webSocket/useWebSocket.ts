@@ -7,11 +7,7 @@ export const useWebSocket = () => {
   const setPrices = usePriceStore(state => state.setPrices);
 
   useEffect(() => {
-    if (!process.env.NEXT_PUBLIC_WEBSOCKET_URL) {
-      throw new Error('NEXT_PUBLIC_WEBSOCKET_URL is not set');
-    }
-
-    const socket = new WebSocket(process.env.NEXT_PUBLIC_WEBSOCKET_URL);
+    const socket = new WebSocket('wss://stream.binance.com:443/ws');
 
     socket.onopen = () => {
       socket.send(
