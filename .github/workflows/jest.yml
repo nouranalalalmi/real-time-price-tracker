@@ -16,27 +16,9 @@ jobs:
         run: |
           npm install jest@29.7.0
 
-          - name: Run Jest
-          id: jest
-          run: |
-            OUTPUT=$(npx jest --ci --coverage . --config jest.config.ts)
-            echo "::set-output name=coverage::$OUTPUT"
-
-      - name: Create comment
-        uses: actions/github-script@v4
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            const output = `${{ steps.jest.outputs.coverage }}`
-            const issue_number = context.issue.number
-            const owner = context.repo.owner
-            const repo = context.repo.repo
-            github.rest.issues.createComment({
-              owner: owner,
-              repo: repo,
-              issue_number: issue_number,
-              body: output
-            })
+      - name: Run Jest
+        run: npx jest --ci --coverage .
+          --config jest.config.ts
 
       - name: Upload JUnit report
         uses: mikepenz/action-junit-report@v2
