@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-sans text-base text-gray-800;
+  @apply font-sans text-base text-gray-800 bg-slate-50;
 }
 
 td,

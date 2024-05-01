@@ -6,41 +6,99 @@ exports[`Details page matches snapshot 1`] = `
     class="flex flex-col gap-y-2"
   >
     <a
-      class="text-sm font-semibold text-blue-500 hover:text-blue-700"
+      class="w-fit text-sm font-semibold text-blue-500 hover:text-blue-700"
       href="/"
     >
-      back
+      ← back to live ticker
     </a>
-    <div>
+    <div
+      class="flex w-full flex-col justify-between gap-6 md:flex-row"
+    >
       <div
-        class="mb-2 flex items-center gap-2"
+        class="w-full"
       >
         <h1
-          class="text-2xl font-semibold"
+          class="pb-2 text-3xl font-semibold"
         >
-          Overview - 
-          <span
-            class="capitalize"
-          >
-            bitcoin
-          </span>
+          History
         </h1>
-        <img
-          alt="asset-logo"
-          data-nimg="1"
-          decoding="async"
-          height="25"
-          loading="lazy"
-          src="/_next/image?url=%2Fimages%2Fbtc.png&w=64&q=75"
-          srcset="/_next/image?url=%2Fimages%2Fbtc.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fbtc.png&w=64&q=75 2x"
-          style="color: transparent;"
-          width="25"
-        />
+        <div
+          class="rounded-lg border bg-white p-2 shadow-sm"
+        >
+          <div
+            class="flex justify-end gap-2"
+          >
+            <button
+              class="border-current/30 rounded-lg border px-2 hover:bg-blue-50 bg-blue-100"
+            >
+              1d
+            </button>
+            <button
+              class="border-current/30 rounded-lg border px-2 hover:bg-blue-50 false"
+            >
+              1w
+            </button>
+            <button
+              class="border-current/30 rounded-lg border px-2 hover:bg-blue-50 false"
+            >
+              1m
+            </button>
+            <button
+              class="border-current/30 rounded-lg border px-2 hover:bg-blue-50 false"
+            >
+              1y
+            </button>
+          </div>
+          <canvas
+            height="150"
+            role="img"
+            width="300"
+          />
+        </div>
       </div>
-      loading..
+      <div
+        class="w-full md:w-1/4"
+      >
+        <div
+          class="flex w-full flex-col"
+        >
+          <h1
+            class="pb-2 text-3xl font-semibold"
+          >
+            Overview
+          </h1>
+          <div
+            class="flex flex-col gap-y-4 rounded-lg border bg-white p-4 shadow-sm"
+          >
+            <div
+              class="flex items-center gap-2 border-b"
+            >
+              <h2
+                class="text-2xl capitalize"
+              >
+                bitcoin
+              </h2>
+              <img
+                alt="asset-logo"
+                data-nimg="1"
+                decoding="async"
+                height="25"
+                loading="lazy"
+                src="/_next/image?url=%2Fimages%2Fbtc.png&w=64&q=75"
+                srcset="/_next/image?url=%2Fimages%2Fbtc.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fbtc.png&w=64&q=75 2x"
+                style="color: transparent;"
+                width="25"
+              />
+            </div>
+            loading..
+          </div>
+        </div>
+      </div>
     </div>
-    <p>
-      chart
+    <p
+      class="p-2 text-xs font-semibold text-green-600"
+    >
+      - Data is refetched every 3 minutes
     </p>
   </div>
 </div>

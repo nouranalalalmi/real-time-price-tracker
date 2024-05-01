@@ -1,4 +1,6 @@
-export const COINS = [
+import { RangeEnum } from './services/types/details';
+
+export const Coins = [
   {
     id: 'bitcoin',
     tickerId: 'btcusdt',
@@ -29,3 +31,10 @@ export const COINS = [
     logo: '/images/ada.png',
   },
 ];
+
+export const RangeIntervalMap = {
+  [RangeEnum.DAY]: { interval: 'h1', dateRange: 24 },
+  [RangeEnum.WEEK]: { interval: 'h6', dateRange: 168 },
+  [RangeEnum.MONTH]: { interval: 'h12', dateRange: 210 },
+  [RangeEnum.YEAR]: { interval: 'd1', dateRange: 2520 },
+};

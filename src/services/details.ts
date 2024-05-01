@@ -1,7 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
+import dayjs from 'dayjs';
 
-import { AssetDetails, IntervalEnum } from './types/details';
+import { RangeIntervalMap } from '@/constants';
+
+import { AssetDetails, AssetHistory, GetAssetHistoryPayload, RangeEnum } from './types/details';
 
 export const useGetAssetDetails = (asset: string) => {
   return useQuery<AssetDetails, Error>({
@@ -11,33 +14,32 @@ export const useGetAssetDetails = (asset: string) => {
       return data.data.data;
     },
     enabled: !!asset,
+    // Refetch the data three minutes
+    refetchInterval: 60 * 3000,
   });
 };
 
-// add start & end	optional	1528470720000 unix
-
-export const useGetAssetHistory = (asset: string, interval = IntervalEnum.DAY_1) => {
-  return useQuery<any, Error>({
-    queryKey: ['history', asset, interval],
+export const useGetAssetHistory = ({ asset, range = RangeEnum.DAY }: GetAssetHistoryPayload) => {
+  return useQuery<AssetHistory[], Error>({
+    queryKey: ['history', asset, range],
     queryFn: async () => {
-      // const data = await axios.get(
-      //   `https://api.coincap.io/v2/assets/${asset}/history?interval=${interval}`,
-      // );
-      const start = new Date();
-      start.setDate(start.getDate() - 30);
-      start.setHours(0, 0, 0, 0);
-      const end = new Date();
-      end.setHours(23, 59, 59, 999);
-
       const data = await axios.request({
         method: 'GET',
         url: `https://api.coincap.io/v2/assets/${asset}/history`,
-        params: { interval: interval, start: start.getTime(), end: end.getTime() },
+        params: {
+          interval: RangeIntervalMap[range].interval,
+          // Subtract the number of days specified by the current selection from the current date
+          // and set the time to the start of the day to get the start date
+          start: dayjs().subtract(RangeIntervalMap[range].dateRange, 'hours').valueOf(),
+          // Set the end date to the end of the current day
+          end: dayjs().endOf('day').valueOf(),
+        },
       });
-      console.log(data);
-
       return data.data.data;
     },
     enabled: !!asset,
+    refetchOnWindowFocus: false,
+    // Refetch the data every three minutes
+    refetchInterval: 60 * 3000,
   });
 };
