@@ -20,11 +20,17 @@ jobs:
         run: npx jest --ci --coverage .
           --config jest.config.ts
 
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          files: ./coverage/lcov.info
+          fail_ci_if_error: true
+
       - name: Upload JUnit report
         uses: mikepenz/action-junit-report@v2
         if: always()
         with:
-          report_paths: "junit.xml"
+          report_paths: 'junit.xml'
           github_token: ${{ secrets.PAT }}
 
       - name: Publish Unit Test Results
