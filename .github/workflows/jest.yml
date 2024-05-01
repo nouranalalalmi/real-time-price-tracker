@@ -33,13 +33,13 @@ jobs:
         with:
           files: junit.xml
 
-      - name: Jest Coverage Comment 1
-        uses: MishaKav/jest-coverage-comment@main
+      # - name: Jest Coverage Comment 1
+      #   uses: MishaKav/jest-coverage-comment@main
 
       - name: Jest Coverage Comment
         uses: MishaKav/jest-coverage-comment@main
         with:
-          coverage-summary-path: ./coverage/coverage-summary.json
+          coverage-summary-path: ./coverage/coverage-final.json
           title: My Jest Coverage Comment
           summary-title: My Summary Title
           badge-title: Coverage
