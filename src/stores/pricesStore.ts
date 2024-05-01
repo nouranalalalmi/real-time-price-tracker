@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+
 import { PricesStoreInterface } from './pricesStore.interface';
 
 export const usePriceStore = create<PricesStoreInterface>(set => ({

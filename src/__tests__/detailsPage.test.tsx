@@ -1,6 +1,8 @@
-import Details from '@/app/[id]/page';
-import { render, screen } from '../../test-utils';
 import mockRouter from 'next-router-mock';
+
+import Details from '@/app/[id]/page';
+
+import { render, screen } from '../../test-utils';
 
 describe('Details page', () => {
   const id = 'bitcoin';

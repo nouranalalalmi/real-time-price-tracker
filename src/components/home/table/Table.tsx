@@ -1,4 +1,5 @@
 import { COINS } from '@/constants';
+
 import { Row } from './Row';
 
 export const Table = () => {

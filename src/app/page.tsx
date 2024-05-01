@@ -2,9 +2,9 @@
 import { useEffect } from 'react';
 
 import { Table } from '@/components/home/table/Table';
-import { useWebSocket } from '@/utils/webSocket/useWebSocket';
 import { useGetAssetPrice } from '@/services/home';
 import { usePriceStore } from '@/stores/pricesStore';
+import { useWebSocket } from '@/utils/webSocket/useWebSocket';
 
 export default function Home() {
   useWebSocket();

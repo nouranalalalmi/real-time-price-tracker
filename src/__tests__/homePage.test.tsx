@@ -1,6 +1,7 @@
 import Home from '@/app/page';
-import { render, screen } from '../../test-utils';
 import { COINS } from '@/constants';
+
+import { render, screen } from '../../test-utils';
 
 describe('Home page', () => {
   it('matches snapshot', () => {

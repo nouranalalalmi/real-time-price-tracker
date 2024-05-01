@@ -1,6 +1,7 @@
+import Link from 'next/link';
+
 import { Chart } from '@/components/details/chart/Chart';
 import { Overview } from '@/components/details/overview/Overview';
-import Link from 'next/link';
 
 export default function Details() {
   return (

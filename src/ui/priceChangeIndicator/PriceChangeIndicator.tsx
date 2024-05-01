@@ -1,5 +1,7 @@
 import { getColorsClasses } from '@/utils/numbers/getColorsClasses';
+
 import { FormattedNumber } from '../formattedNumber/FormattedNumber';
+
 import { PriceChangeIndicatorInterface } from './PriceChangeIndicator.interface';
 
 export const PriceChangeIndicator = ({ percent }: PriceChangeIndicatorInterface) => {
