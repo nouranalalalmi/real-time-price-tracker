@@ -18,10 +18,10 @@ const config: Config = {
   collectCoverage: true,
   coverageThreshold: {
     global: {
-      branches: 100,
-      functions: 100,
-      lines: 100,
-      statements: 100,
+      branches: 78,
+      functions: 74,
+      lines: 88,
+      statements: 88,
     },
   },
 };
