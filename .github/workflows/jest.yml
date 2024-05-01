@@ -33,8 +33,8 @@ jobs:
         with:
           files: junit.xml
 
-  coverage:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: ArtiomTr/jest-coverage-report-action@v2
+      - name: Upload coverage
+        uses: raulanatol/jest-coverage-comment-action@main
+        if: always()
+        with:
+          github-token: ${{ secrets.PAT }}
