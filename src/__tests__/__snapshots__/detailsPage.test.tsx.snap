@@ -13,7 +13,7 @@ exports[`Details page matches snapshot 1`] = `
     </a>
     <div>
       <div
-        class="flex gap-2 items-center mb-2"
+        class="mb-2 flex items-center gap-2"
       >
         <h1
           class="text-2xl font-semibold"
