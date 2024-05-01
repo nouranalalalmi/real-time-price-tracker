@@ -36,33 +36,36 @@ To run the project locally, follow these steps:
    ```
 
 2. Navigate to the project directory:
-    ```
+   ```
    cd real-time-price-tracker
    ```
 3. Install dependencies:
-    ```
-    yarn install
-    ```
+   ```
+   yarn install
+   ```
 4. Start the development server:
-    ```
+   ```
    yarn dev
    ```
 5. Open your browser and visit http://localhost:3000 to view the application.
 
 ### How to Use
-   1. Home page: you'll see a list of available cryptocurrencies to track.
-   Click on a cryptocurrency to view its real-time price and historical price trend.
-   
-   2. Details page.
-   Prices will be updated in real-time using WebSocket.
+
+1.  Home page: you'll see a list of available cryptocurrencies to track.
+    Click on a cryptocurrency to view its real-time price and historical price trend.
+
+2.  Details page.
+    Prices will be updated in real-time using WebSocket.
 
 ### Contributing
 
 #### Testing
-   To run unit tests, use the following command:
-   ```
-    yarn test
-   ```
+
+To run unit tests, use the following command:
+
+```
+ yarn test
+```
 
 #### GitHub Workflows
 

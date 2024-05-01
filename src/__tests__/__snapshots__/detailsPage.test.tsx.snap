@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Details page matches snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-y-2"
+  >
+    <a
+      class="text-sm font-semibold text-blue-500 hover:text-blue-700"
+      href="/"
+    >
+      back
+    </a>
+    <div>
+      <div
+        class="mb-2 flex items-center gap-2"
+      >
+        <h1
+          class="text-2xl font-semibold"
+        >
+          Overview - 
+          <span
+            class="capitalize"
+          >
+            bitcoin
+          </span>
+        </h1>
+        <img
+          alt="asset-logo"
+          data-nimg="1"
+          decoding="async"
+          height="25"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fbtc.png&w=64&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fbtc.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fbtc.png&w=64&q=75 2x"
+          style="color: transparent;"
+          width="25"
+        />
+      </div>
+      loading..
+    </div>
+    <p>
+      chart
+    </p>
+  </div>
+</div>
+`;

@@ -1,9 +1,19 @@
 import Home from '@/app/page';
-import { render, screen } from '@testing-library/react';
+import { COINS } from '@/constants';
+
+import { render, screen } from '../../test-utils';
 
 describe('Home page', () => {
-  it('renders correctly', () => {
+  it('matches snapshot', () => {
+    const { container } = render(<Home />);
+    expect(container).toMatchSnapshot();
+  });
+
+  it('renders coins', () => {
     render(<Home />);
-    expect(screen.getByText('real-time-price-tracker')).toBeInTheDocument();
+
+    COINS.forEach(({ name }) => {
+      expect(screen.getByText(name)).toBeInTheDocument();
+    });
   });
 });

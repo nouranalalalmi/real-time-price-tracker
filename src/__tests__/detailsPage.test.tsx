@@ -1,9 +1,23 @@
+import mockRouter from 'next-router-mock';
+
 import Details from '@/app/[id]/page';
-import { render, screen } from '@testing-library/react';
+
+import { render, screen } from '../../test-utils';
 
 describe('Details page', () => {
-  it('renders correctly', () => {
-    render(<Details />);
-    expect(screen.getByText('real-time-price-tracker details')).toBeInTheDocument();
+  const id = 'bitcoin';
+  beforeAll(() => {
+    mockRouter.push({
+      pathname: '/:id',
+      query: {
+        id,
+      },
+    });
+  });
+
+  it('matches snapshot', () => {
+    const { container } = render(<Details />);
+    expect(screen.getByText(id)).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
   });
 });
