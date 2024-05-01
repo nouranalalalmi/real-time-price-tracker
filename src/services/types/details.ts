@@ -13,14 +13,21 @@ export interface AssetDetails {
   explorer: string;
 }
 
-export enum IntervalEnum {
-  MINUTE_1 = 'm1',
-  MINUTE_5 = 'm5',
-  MINUTE_15 = 'm15',
-  MINUTE_30 = 'm30',
-  HOUR_1 = 'h1',
-  HOUR_2 = 'h2',
-  HOUR_6 = 'h6',
-  HOUR_12 = 'h12',
-  DAY_1 = 'd1',
+export interface AssetHistory {
+  priceUsd: string;
+  time: number;
+  circulatingSupply: string;
+  date: string;
+}
+
+export interface GetAssetHistoryPayload {
+  asset: string;
+  range: RangeEnum;
+}
+
+export enum RangeEnum {
+  DAY = '1d',
+  WEEK = '1w',
+  MONTH = '1m',
+  YEAR = '1y',
 }

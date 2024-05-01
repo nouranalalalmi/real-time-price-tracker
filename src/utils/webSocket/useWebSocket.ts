@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { COINS } from '@/constants';
+import { Coins } from '@/constants';
 import { usePriceStore } from '@/stores/pricesStore';
 
 export const useWebSocket = () => {
@@ -13,7 +13,7 @@ export const useWebSocket = () => {
       socket.send(
         JSON.stringify({
           method: 'SUBSCRIBE',
-          params: COINS.map(coin => `${coin.tickerId}@ticker`),
+          params: Coins.map(coin => `${coin.tickerId}@ticker`),
           id: 1,
         })
       );

@@ -1,5 +1,5 @@
-import { COINS } from '@/constants';
+import { Coins } from '@/constants';
 
 export interface AssetPriceInterface {
-  asset: (typeof COINS)[number];
+  asset: (typeof Coins)[number];
 }

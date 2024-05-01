@@ -3,7 +3,7 @@
 exports[`Home page matches snapshot 1`] = `
 <div>
   <div
-    class="overflow-hidden rounded-lg border shadow-sm"
+    class="overflow-hidden rounded-lg border bg-white shadow-sm"
   >
     <table
       class="w-full table-fixed"
