@@ -21,6 +21,7 @@
     "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@microsoft/eslint-formatter-sarif": "2.1.7",
     "@next/eslint-plugin-next": "^14.2.3",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^15.0.5",
