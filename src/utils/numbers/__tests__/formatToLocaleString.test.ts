@@ -16,4 +16,8 @@ describe('formatToLocaleString', () => {
   it('should return "-" for undefined values', () => {
     expect(formatToLocaleString(undefined)).toBe('-');
   });
+
+  it('should return "-" for zero values', () => {
+    expect(formatToLocaleString(0)).toBe('0.00');
+  });
 });
