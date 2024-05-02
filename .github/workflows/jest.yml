@@ -17,7 +17,7 @@ jobs:
 
       - name: Run Jest
         run: npx jest --ci --coverage .
-          --config jest.config.ts
+          --config jest.config.ts --TZ=Asia/Dubai
 
       - name: Upload JUnit report
         uses: mikepenz/action-junit-report@v2
