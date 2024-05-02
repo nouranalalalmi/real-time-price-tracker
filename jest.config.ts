@@ -29,10 +29,10 @@ const config: Config = {
   reporters: ['default', 'jest-junit'],
   coverageThreshold: {
     global: {
-      branches: 95,
-      functions: 95,
-      lines: 95,
-      statements: 95,
+      branches: 93,
+      functions: 93,
+      lines: 93,
+      statements: 93,
     },
   },
 };

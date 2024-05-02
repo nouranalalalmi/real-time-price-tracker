@@ -63,7 +63,7 @@ To run the project locally, follow these steps:
 
 #### Testing & Coverage
 
-The application has a coverage threshold set at 95% for all categories (statements, branches, functions, and lines). If the coverage falls below this threshold, the test command will fail, and consequently, the pipeline will also fail. This ensures a high standard of code quality and reliability.
+The application has a coverage threshold set at 93% for all categories (statements, branches, functions, and lines). If the coverage falls below this threshold, the test command will fail, and consequently, the pipeline will also fail. This ensures a high standard of code quality and reliability.
 
 To run unit tests, use the following command:
 
