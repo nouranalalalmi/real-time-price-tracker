@@ -11,17 +11,28 @@ const config: Config = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   passWithNoTests: true,
   moduleNameMapper: {
-    '^@/components/(.*)$': '<rootDir>/components/$1',
+    // Handle CSS imports (with CSS modules)
+    // https://jestjs.io/docs/webpack#mocking-css-modules
+    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
+
+    // Handle CSS imports (without CSS modules)
+    '^.+\\.(css|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',
+
+    // Handle image imports
+    // https://jestjs.io/docs/webpack#handling-static-assets
+    '^.+\\.(png|jpg|jpeg|gif|webp|avif|ico|bmp|svg)$/i': `<rootDir>/__mocks__/fileMock.js`,
+
+    // Handle module aliases
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
   transform: { '^.+\\.(ts|tsx|js|jsx)?$': 'ts-jest' },
   reporters: ['default', 'jest-junit'],
-  collectCoverage: true,
   coverageThreshold: {
     global: {
-      branches: 78,
-      functions: 74,
-      lines: 88,
-      statements: 88,
+      branches: 95,
+      functions: 95,
+      lines: 95,
+      statements: 95,
     },
   },
 };

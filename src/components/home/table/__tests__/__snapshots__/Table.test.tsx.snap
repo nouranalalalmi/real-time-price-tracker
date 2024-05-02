@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home page matches snapshot 1`] = `
+exports[`Table should match snapshot 1`] = `
 <div>
   <div
     class="overflow-hidden rounded-lg border bg-white shadow-sm"
@@ -60,19 +60,15 @@ exports[`Home page matches snapshot 1`] = `
             </div>
           </td>
           <td>
-            <div
-              class="size-4 animate-spin rounded-full border-y-2 border-pink-500"
-              data-testid="spinner"
-            />
+            $
+            58,578.39
           </td>
           <td>
             <div
-              class="  w-fit rounded-xl px-2 py-1 text-xs font-semibold"
+              class="bg-green-100 text-green-500 w-fit rounded-xl px-2 py-1 text-xs font-semibold"
             >
-              <div
-                class="size-4 animate-spin rounded-full border-y-2 border-pink-500"
-                data-testid="spinner"
-              />
+              2.01
+              %
             </div>
           </td>
         </tr>
@@ -112,19 +108,15 @@ exports[`Home page matches snapshot 1`] = `
             </div>
           </td>
           <td>
-            <div
-              class="size-4 animate-spin rounded-full border-y-2 border-pink-500"
-              data-testid="spinner"
-            />
+            $
+            2,971.99
           </td>
           <td>
             <div
-              class="  w-fit rounded-xl px-2 py-1 text-xs font-semibold"
+              class="bg-green-100 text-green-500 w-fit rounded-xl px-2 py-1 text-xs font-semibold"
             >
-              <div
-                class="size-4 animate-spin rounded-full border-y-2 border-pink-500"
-                data-testid="spinner"
-              />
+              2.70
+              %
             </div>
           </td>
         </tr>
@@ -164,19 +156,15 @@ exports[`Home page matches snapshot 1`] = `
             </div>
           </td>
           <td>
-            <div
-              class="size-4 animate-spin rounded-full border-y-2 border-pink-500"
-              data-testid="spinner"
-            />
+            $
+            136.43
           </td>
           <td>
             <div
-              class="  w-fit rounded-xl px-2 py-1 text-xs font-semibold"
+              class="bg-green-100 text-green-500 w-fit rounded-xl px-2 py-1 text-xs font-semibold"
             >
-              <div
-                class="size-4 animate-spin rounded-full border-y-2 border-pink-500"
-                data-testid="spinner"
-              />
+              11.14
+              %
             </div>
           </td>
         </tr>
@@ -216,19 +204,15 @@ exports[`Home page matches snapshot 1`] = `
             </div>
           </td>
           <td>
-            <div
-              class="size-4 animate-spin rounded-full border-y-2 border-pink-500"
-              data-testid="spinner"
-            />
+            $
+            0.45
           </td>
           <td>
             <div
-              class="  w-fit rounded-xl px-2 py-1 text-xs font-semibold"
+              class="bg-green-100 text-green-500 w-fit rounded-xl px-2 py-1 text-xs font-semibold"
             >
-              <div
-                class="size-4 animate-spin rounded-full border-y-2 border-pink-500"
-                data-testid="spinner"
-              />
+              3.87
+              %
             </div>
           </td>
         </tr>

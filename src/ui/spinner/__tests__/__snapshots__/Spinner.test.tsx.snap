@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner should render the spinner 1`] = `
+<div>
+  <div
+    class="size-4 animate-spin rounded-full border-y-2 border-pink-500"
+    data-testid="spinner"
+  />
+</div>
+`;

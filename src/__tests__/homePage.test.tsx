@@ -1,5 +1,5 @@
 import Home from '@/app/page';
-import { Coins } from '@/constants';
+import { COINS } from '@/constants';
 
 import { render, screen } from '../../test-utils';
 
@@ -9,10 +9,10 @@ describe('Home page', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('renders coins', () => {
+  it('renders COINS', () => {
     render(<Home />);
 
-    Coins.forEach(({ name }) => {
+    COINS.forEach(({ name }) => {
       expect(screen.getByText(name)).toBeInTheDocument();
     });
   });

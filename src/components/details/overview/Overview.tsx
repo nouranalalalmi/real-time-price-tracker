@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
 
-import { Coins } from '@/constants';
+import { COINS } from '@/constants';
 import { useGetAssetDetails } from '@/services/details';
 import { FormattedNumber } from '@/ui/formattedNumber/FormattedNumber';
 import { Spinner } from '@/ui/spinner/Spinner';
@@ -14,7 +14,7 @@ import { OverviewItem } from './OverviewItem';
 export const Overview = () => {
   const { id } = useParams();
   const { isLoading, data } = useGetAssetDetails(id as string);
-  const logo = Coins.find(c => c.id === id)?.logo;
+  const logo = COINS.find(c => c.id === id)?.logo;
 
   if (!isLoading && !data) {
     return <p>No data found for {id}</p>;

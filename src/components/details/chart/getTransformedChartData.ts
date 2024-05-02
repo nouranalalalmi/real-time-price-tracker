@@ -1,12 +1,12 @@
-// eslint-disable-next-line import/named
-import { ChartData } from 'chart.js';
 import dayjs from 'dayjs';
+import type { ChartProps } from 'react-chartjs-2';
 
+import { CHART_COLORS } from '@/constants';
 import { AssetHistory } from '@/services/types/details';
 
-export const chartTransformedData = (
+export const getTransformedChartData = (
   dataHistory: AssetHistory[]
-): ChartData<'line', number[], string> => {
+): ChartProps<'line'>['data'] => {
   const labels = dataHistory?.map(item => dayjs(item.date).format('DD-MM-YYYY hh:mm a'));
   const dataPoints = dataHistory?.map(item => Number(item.priceUsd));
 
@@ -20,13 +20,12 @@ export const chartTransformedData = (
         backgroundColor:
           // compare the last data point with the first, if it is is greater than the first, then it is green, else red
           dataPoints && dataPoints.slice(-1)[0] >= dataPoints[0]
-            ? 'rgba(34,197,94, 0.1)'
-            : 'rgba(239,68, 68, 0.1)',
+            ? CHART_COLORS.TRANSPARENT_GREEN
+            : CHART_COLORS.TRANSPARENT_RED,
         segment: {
           borderColor: ctx => {
             // compare each point with the first point, if it is greater than the first, then it is green, else red
-            if (!dataPoints) return 'gray';
-            return ctx.p1.parsed.y > dataPoints[0] ? 'rgba(34,197,94)' : 'rgba(239,68, 68)';
+            return ctx.p1.parsed.y > dataPoints[0] ? CHART_COLORS.GREEN : CHART_COLORS.RED;
           },
         },
       },

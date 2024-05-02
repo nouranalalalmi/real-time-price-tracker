@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WebSocketStatus should display connection status 1`] = `
+<div>
+  <div
+    class="border bg-white p-1 text-center text-xs shadow-sm"
+  >
+    <p
+      class=" font-semibold"
+    >
+      Web socket status: 
+      connected
+    </p>
+  </div>
+</div>
+`;
+
+exports[`WebSocketStatus should display error message 1`] = `
+<div>
+  <div
+    class="border bg-white p-1 text-center text-xs shadow-sm"
+  >
+    <p
+      class=" font-semibold"
+    >
+      Web socket status: 
+      disconnected
+    </p>
+    <p
+      class="text-red-600"
+    >
+      Test error
+    </p>
+  </div>
+</div>
+`;

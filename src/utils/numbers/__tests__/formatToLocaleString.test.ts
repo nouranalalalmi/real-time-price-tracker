@@ -10,7 +10,7 @@ describe('formatToLocaleString', () => {
   });
 
   it('should return "-" for NaN values', () => {
-    expect(formatToLocaleString('abc')).toBe('-');
+    expect(formatToLocaleString(NaN)).toBe('-');
   });
 
   it('should return "-" for undefined values', () => {

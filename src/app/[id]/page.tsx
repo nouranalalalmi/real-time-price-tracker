@@ -15,7 +15,7 @@ export default function Details() {
           <Overview />
         </div>
       </div>
-      <p className="p-2 text-xs font-semibold text-green-600">
+      <p className="p-2 text-xs font-semibold text-yellow-600">
         - Data is refetched every 3 minutes
       </p>
     </div>
