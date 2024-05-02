@@ -2,214 +2,245 @@
 
 exports[`Home page matches snapshot 1`] = `
 <div>
-  <div
-    class="overflow-hidden rounded-lg border bg-white shadow-sm"
-  >
-    <table
-      class="w-full table-fixed"
+  <div>
+    <h1
+      class="pb-2 text-3xl font-semibold"
     >
-      <thead>
-        <tr
-          class="text-left"
-        >
-          <th>
-            Asset
-          </th>
-          <th>
-            Price
-          </th>
-          <th>
-            24hr change
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr
-          class="cursor-pointer hover:bg-gray-100"
-        >
-          <td
-            class="flex items-center gap-x-2"
+      Real Time Price Tracker
+    </h1>
+    <div
+      class="overflow-hidden rounded-lg border bg-white shadow-sm"
+    >
+      <table
+        class="w-full table-fixed"
+      >
+        <thead>
+          <tr
+            class="text-left"
           >
-            <div
-              class="relative size-9"
-            >
-              <img
-                alt="Bitcoin"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                sizes="100vw"
-                src="/_next/image?url=%2Fimages%2Fbtc.png&w=3840&q=75"
-                srcset="/_next/image?url=%2Fimages%2Fbtc.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbtc.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbtc.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbtc.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbtc.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbtc.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbtc.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbtc.png&w=3840&q=75 3840w"
-                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; object-position: center; color: transparent;"
-              />
-            </div>
-            <div
-              class="flex flex-col"
-            >
-              <span
-                class="text-lg uppercase"
-              >
-                btc
-              </span>
-              <span
-                class="text-xs text-gray-500"
-              >
-                Bitcoin
-              </span>
-            </div>
-          </td>
-          <td>
-            loading..
-          </td>
-          <td>
-            <div
-              class="  w-fit rounded-xl px-2 py-1 text-xs font-semibold"
-            >
-              loading..
-            </div>
-          </td>
-        </tr>
-        <tr
-          class="cursor-pointer hover:bg-gray-100"
-        >
-          <td
-            class="flex items-center gap-x-2"
+            <th>
+              Asset
+            </th>
+            <th>
+              Price
+            </th>
+            <th>
+              24hr change
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="cursor-pointer hover:bg-gray-100"
           >
-            <div
-              class="relative size-9"
+            <td
+              class="flex items-center gap-x-2"
             >
-              <img
-                alt="Ethereum"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                sizes="100vw"
-                src="/_next/image?url=%2Fimages%2Feth.png&w=3840&q=75"
-                srcset="/_next/image?url=%2Fimages%2Feth.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Feth.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Feth.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Feth.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Feth.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Feth.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Feth.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Feth.png&w=3840&q=75 3840w"
-                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; object-position: center; color: transparent;"
+              <div
+                class="relative size-9"
+              >
+                <img
+                  alt="Bitcoin"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  sizes="100vw"
+                  src="/_next/image?url=%2Fimages%2Fbtc.png&w=3840&q=75"
+                  srcset="/_next/image?url=%2Fimages%2Fbtc.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbtc.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbtc.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbtc.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbtc.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbtc.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbtc.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbtc.png&w=3840&q=75 3840w"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; object-position: center; color: transparent;"
+                />
+              </div>
+              <div
+                class="flex flex-col"
+              >
+                <span
+                  class="text-lg uppercase"
+                >
+                  btc
+                </span>
+                <span
+                  class="text-xs text-gray-500"
+                >
+                  Bitcoin
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="size-4 animate-spin rounded-full border-y-2 border-pink-500"
+                data-testid="spinner"
               />
-            </div>
-            <div
-              class="flex flex-col"
-            >
-              <span
-                class="text-lg uppercase"
+            </td>
+            <td>
+              <div
+                class="  w-fit rounded-xl px-2 py-1 text-xs font-semibold"
               >
-                eth
-              </span>
-              <span
-                class="text-xs text-gray-500"
-              >
-                Ethereum
-              </span>
-            </div>
-          </td>
-          <td>
-            loading..
-          </td>
-          <td>
-            <div
-              class="  w-fit rounded-xl px-2 py-1 text-xs font-semibold"
-            >
-              loading..
-            </div>
-          </td>
-        </tr>
-        <tr
-          class="cursor-pointer hover:bg-gray-100"
-        >
-          <td
-            class="flex items-center gap-x-2"
+                <div
+                  class="size-4 animate-spin rounded-full border-y-2 border-pink-500"
+                  data-testid="spinner"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="cursor-pointer hover:bg-gray-100"
           >
-            <div
-              class="relative size-9"
+            <td
+              class="flex items-center gap-x-2"
             >
-              <img
-                alt="Solana"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                sizes="100vw"
-                src="/_next/image?url=%2Fimages%2Fsol.png&w=3840&q=75"
-                srcset="/_next/image?url=%2Fimages%2Fsol.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fsol.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fsol.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fsol.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fsol.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fsol.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fsol.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fsol.png&w=3840&q=75 3840w"
-                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; object-position: center; color: transparent;"
+              <div
+                class="relative size-9"
+              >
+                <img
+                  alt="Ethereum"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  sizes="100vw"
+                  src="/_next/image?url=%2Fimages%2Feth.png&w=3840&q=75"
+                  srcset="/_next/image?url=%2Fimages%2Feth.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Feth.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Feth.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Feth.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Feth.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Feth.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Feth.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Feth.png&w=3840&q=75 3840w"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; object-position: center; color: transparent;"
+                />
+              </div>
+              <div
+                class="flex flex-col"
+              >
+                <span
+                  class="text-lg uppercase"
+                >
+                  eth
+                </span>
+                <span
+                  class="text-xs text-gray-500"
+                >
+                  Ethereum
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="size-4 animate-spin rounded-full border-y-2 border-pink-500"
+                data-testid="spinner"
               />
-            </div>
-            <div
-              class="flex flex-col"
-            >
-              <span
-                class="text-lg uppercase"
+            </td>
+            <td>
+              <div
+                class="  w-fit rounded-xl px-2 py-1 text-xs font-semibold"
               >
-                sol
-              </span>
-              <span
-                class="text-xs text-gray-500"
-              >
-                Solana
-              </span>
-            </div>
-          </td>
-          <td>
-            loading..
-          </td>
-          <td>
-            <div
-              class="  w-fit rounded-xl px-2 py-1 text-xs font-semibold"
-            >
-              loading..
-            </div>
-          </td>
-        </tr>
-        <tr
-          class="cursor-pointer hover:bg-gray-100"
-        >
-          <td
-            class="flex items-center gap-x-2"
+                <div
+                  class="size-4 animate-spin rounded-full border-y-2 border-pink-500"
+                  data-testid="spinner"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="cursor-pointer hover:bg-gray-100"
           >
-            <div
-              class="relative size-9"
+            <td
+              class="flex items-center gap-x-2"
             >
-              <img
-                alt="Cardano"
-                data-nimg="fill"
-                decoding="async"
-                loading="lazy"
-                sizes="100vw"
-                src="/_next/image?url=%2Fimages%2Fada.png&w=3840&q=75"
-                srcset="/_next/image?url=%2Fimages%2Fada.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fada.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fada.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fada.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fada.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fada.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fada.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fada.png&w=3840&q=75 3840w"
-                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; object-position: center; color: transparent;"
+              <div
+                class="relative size-9"
+              >
+                <img
+                  alt="Solana"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  sizes="100vw"
+                  src="/_next/image?url=%2Fimages%2Fsol.png&w=3840&q=75"
+                  srcset="/_next/image?url=%2Fimages%2Fsol.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fsol.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fsol.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fsol.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fsol.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fsol.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fsol.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fsol.png&w=3840&q=75 3840w"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; object-position: center; color: transparent;"
+                />
+              </div>
+              <div
+                class="flex flex-col"
+              >
+                <span
+                  class="text-lg uppercase"
+                >
+                  sol
+                </span>
+                <span
+                  class="text-xs text-gray-500"
+                >
+                  Solana
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="size-4 animate-spin rounded-full border-y-2 border-pink-500"
+                data-testid="spinner"
               />
-            </div>
-            <div
-              class="flex flex-col"
-            >
-              <span
-                class="text-lg uppercase"
+            </td>
+            <td>
+              <div
+                class="  w-fit rounded-xl px-2 py-1 text-xs font-semibold"
               >
-                ada
-              </span>
-              <span
-                class="text-xs text-gray-500"
-              >
-                Cardano
-              </span>
-            </div>
-          </td>
-          <td>
-            loading..
-          </td>
-          <td>
-            <div
-              class="  w-fit rounded-xl px-2 py-1 text-xs font-semibold"
+                <div
+                  class="size-4 animate-spin rounded-full border-y-2 border-pink-500"
+                  data-testid="spinner"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="cursor-pointer hover:bg-gray-100"
+          >
+            <td
+              class="flex items-center gap-x-2"
             >
-              loading..
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+              <div
+                class="relative size-9"
+              >
+                <img
+                  alt="Cardano"
+                  data-nimg="fill"
+                  decoding="async"
+                  loading="lazy"
+                  sizes="100vw"
+                  src="/_next/image?url=%2Fimages%2Fada.png&w=3840&q=75"
+                  srcset="/_next/image?url=%2Fimages%2Fada.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fada.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fada.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fada.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fada.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fada.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fada.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fada.png&w=3840&q=75 3840w"
+                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; object-position: center; color: transparent;"
+                />
+              </div>
+              <div
+                class="flex flex-col"
+              >
+                <span
+                  class="text-lg uppercase"
+                >
+                  ada
+                </span>
+                <span
+                  class="text-xs text-gray-500"
+                >
+                  Cardano
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="size-4 animate-spin rounded-full border-y-2 border-pink-500"
+                data-testid="spinner"
+              />
+            </td>
+            <td>
+              <div
+                class="  w-fit rounded-xl px-2 py-1 text-xs font-semibold"
+              >
+                <div
+                  class="size-4 animate-spin rounded-full border-y-2 border-pink-500"
+                  data-testid="spinner"
+                />
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 `;

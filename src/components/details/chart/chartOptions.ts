@@ -1,7 +1,6 @@
-// eslint-disable-next-line import/named
-import { ChartOptions } from 'chart.js';
+import type { ChartProps } from 'react-chartjs-2';
 
-export const chartOptions: ChartOptions<'line'> = {
+export const chartOptions: ChartProps<'line'>['options'] = {
   responsive: true,
   interaction: {
     intersect: false,

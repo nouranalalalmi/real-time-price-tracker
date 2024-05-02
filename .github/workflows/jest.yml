@@ -3,7 +3,6 @@ name: Jest
 on: [pull_request]
 
 jobs:
-  # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
   jest:
     name: Run jest tests
     runs-on: ubuntu-latest
@@ -17,14 +16,14 @@ jobs:
           npm install jest@29.7.0
 
       - name: Run Jest
-        run: npx jest --ci --coverage .
+        run: TZ=Asia/Dubai npx jest --ci --coverage .
           --config jest.config.ts
 
       - name: Upload JUnit report
         uses: mikepenz/action-junit-report@v2
         if: always()
         with:
-          report_paths: "junit.xml"
+          report_paths: 'junit.xml'
           github_token: ${{ secrets.PAT }}
 
       - name: Publish Unit Test Results
@@ -32,3 +31,9 @@ jobs:
         if: always()
         with:
           files: junit.xml
+
+      - name: Comment coverage report
+        uses: romeovs/lcov-reporter-action@v0.2.16
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          lcov-file: ./coverage/lcov.info

@@ -1,7 +1,6 @@
 type Price = {
   [key: string]: {
     lastPrice: string;
-    priceChange: string;
     priceChangePercent: string;
   };
 };

@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 
 import './globals.css';
+
+import { WebSocketStatus } from '@/components/webSocketStatus/WebSocketStatus';
+
 import Providers from './providers';
 
 export const metadata: Metadata = {
@@ -16,8 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex min-h-screen flex-col p-5 md:p-24">
-        <Providers>{children}</Providers>
+      <body>
+        <Providers>
+          <WebSocketStatus />
+          <div className="flex min-h-screen flex-col p-5 md:p-24">{children}</div>
+        </Providers>
       </body>
     </html>
   );

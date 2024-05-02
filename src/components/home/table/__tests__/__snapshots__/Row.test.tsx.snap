@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Row should match snapshot 1`] = `
+<div>
+  <tr
+    class="cursor-pointer hover:bg-gray-100"
+  >
+    <td
+      class="flex items-center gap-x-2"
+    >
+      <div
+        class="relative size-9"
+      >
+        <img
+          alt="Bitcoin"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          sizes="100vw"
+          src="/_next/image?url=%2Flogo.png&w=3840&q=75"
+          srcset="/_next/image?url=%2Flogo.png&w=640&q=75 640w, /_next/image?url=%2Flogo.png&w=750&q=75 750w, /_next/image?url=%2Flogo.png&w=828&q=75 828w, /_next/image?url=%2Flogo.png&w=1080&q=75 1080w, /_next/image?url=%2Flogo.png&w=1200&q=75 1200w, /_next/image?url=%2Flogo.png&w=1920&q=75 1920w, /_next/image?url=%2Flogo.png&w=2048&q=75 2048w, /_next/image?url=%2Flogo.png&w=3840&q=75 3840w"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; object-position: center; color: transparent;"
+        />
+      </div>
+      <div
+        class="flex flex-col"
+      >
+        <span
+          class="text-lg uppercase"
+        >
+          BTC
+        </span>
+        <span
+          class="text-xs text-gray-500"
+        >
+          Bitcoin
+        </span>
+      </div>
+    </td>
+    <td>
+      $
+      50,000.00
+    </td>
+    <td>
+      <div
+        class="bg-green-100 text-green-500 w-fit rounded-xl px-2 py-1 text-xs font-semibold"
+      >
+        5.00
+        %
+      </div>
+    </td>
+  </tr>
+</div>
+`;

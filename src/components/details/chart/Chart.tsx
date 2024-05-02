@@ -1,4 +1,5 @@
 'use client';
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -17,7 +18,7 @@ import { useGetAssetHistory } from '@/services/details';
 import { RangeEnum } from '@/services/types/details';
 
 import { chartOptions } from './chartOptions';
-import { chartTransformedData } from './chartTransformedData';
+import { getTransformedChartData } from './getTransformedChartData';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler);
 
@@ -35,6 +36,7 @@ export const Chart = () => {
         <div className="flex justify-end gap-2">
           {Object.values(RangeEnum).map(enumVal => (
             <button
+              data-testid={`range-${enumVal}`}
               key={enumVal}
               className={`border-current/30 rounded-lg border px-2 hover:bg-blue-50 ${
                 range === enumVal && 'bg-blue-100'
@@ -44,7 +46,7 @@ export const Chart = () => {
             </button>
           ))}
         </div>
-        <Line options={chartOptions} data={chartTransformedData(dataHistory || [])} />
+        <Line options={chartOptions} data={getTransformedChartData(dataHistory || [])} />
       </div>
     </div>
   );
