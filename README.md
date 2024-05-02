@@ -34,7 +34,7 @@ To run the project locally, follow these steps:
 1. Clone the repository:
 
    ```
-   git clone <https://github.com/nouranalalalmi/real-time-price-tracker.git>
+   git clone https://github.com/nouranalalalmi/real-time-price-tracker.git
    ```
 
 2. Navigate to the project directory:
