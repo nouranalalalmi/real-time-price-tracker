@@ -26,7 +26,7 @@ const config: Config = {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
   transform: { '^.+\\.(ts|tsx|js|jsx)?$': 'ts-jest' },
-  reporters: ['default', 'jest-junit', 'text', 'lcov'],
+  coverageReporters: ['text', 'lcov'],
   coverageThreshold: {
     global: {
       branches: 90,
