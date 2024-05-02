@@ -55,11 +55,11 @@ To run the project locally, follow these steps:
 
 1. **Home Page**: When you first open the application, you'll land on the Home page. Here, you'll see a list of available cryptocurrencies that the application is currently tracking. On initial load, the application fetches the current prices from the CoinCap API. Each cryptocurrency is then displayed with its current price, which is updated in real-time using the Binance WebSocket API.
 
-![Screenshot of the homepage](./homepage.png)
+![Screenshot of the homepage](./home.png)
 
 2. **Details Page**: If you want to view more detailed information about a cryptocurrency, simply click on it from the list in the home page. On this page, you'll see an overview of the selected cryptocurrency and a chart displaying its historical price trend. The historical price trend is generated using data from the CoinCap API, and you can view trends for different time periods: 1 day (1D), 1 week (1W), 1 month (1M), and 1 year (1Y). The chart data is refetched every 3 minutes.
 
-![Screenshot of the homepage](./details.png)
+![Screenshot of the details](./details.png)
 
 ### Contributing
 
