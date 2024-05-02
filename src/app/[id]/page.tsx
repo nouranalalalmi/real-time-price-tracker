@@ -2,7 +2,6 @@ import Link from 'next/link';
 
 import { Chart } from '@/components/details/chart/Chart';
 import { Overview } from '@/components/details/overview/Overview';
-import { COINS } from '@/constants';
 
 export default function Details() {
   return (
@@ -21,11 +20,4 @@ export default function Details() {
       </p>
     </div>
   );
-}
-export async function getStaticPaths() {
-  const paths = COINS.map(id => ({
-    params: { id: id.toString() },
-  }));
-
-  return { paths, fallback: false };
 }
