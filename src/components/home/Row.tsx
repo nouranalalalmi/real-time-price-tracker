@@ -20,7 +20,7 @@ export const Row = ({ asset }: AssetPriceInterface) => {
       <td className="flex items-center gap-x-2">
         <div className="relative size-9">
           <Image
-            src="/images/btc.png"
+            src={asset.logo}
             alt={asset.name}
             layout="fill"
             objectFit="contain"

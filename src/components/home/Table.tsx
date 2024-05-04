@@ -29,8 +29,6 @@ export const Table = () => {
   return (
     <>
       <div className="overflow-hidden rounded-lg border bg-white shadow-sm">
-        {process.env.NODE_ENV}
-        <a href="/hey">hey</a>
         <table className="w-full table-fixed">
           <thead>
             <tr className="text-left">
