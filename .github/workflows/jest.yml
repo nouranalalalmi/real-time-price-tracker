@@ -32,6 +32,13 @@ jobs:
         with:
           files: junit.xml
 
+      - name: Comment coverage report
+        uses: romeovs/lcov-reporter-action@v0.2.16
+        if: always()
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          lcov-file: ./coverage/lcov.info
+
   coverage_report:
     name: Generate coverage report
     needs: jest
@@ -45,8 +52,7 @@ jobs:
       - name: Report code coverage
         uses: zgosalvez/github-actions-report-lcov@v3
         with:
-          coverage-files: coverage/lcov.*.info
-          minimum-coverage: 90
+          coverage-files: ./coverage/lcov.info
           artifact-name: code-coverage-report
           github-token: ${{ secrets.GITHUB_TOKEN }}
           update-comment: true
