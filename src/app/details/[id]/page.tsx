@@ -3,6 +3,25 @@ import Link from 'next/link';
 import { Details } from '@/components/details/Details';
 import { COINS } from '@/constants';
 
+export async function getStaticPaths() {
+  const paths = COINS.map(coin => ({
+    params: { id: coin.id.toString() },
+  }));
+
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps() {
+  // Fetch data based on params.id here
+  // ...
+
+  return {
+    props: {
+      // Your data here
+    },
+  };
+}
+
 export default function DetailsPage({
   params: { id },
 }: {
@@ -18,12 +37,4 @@ export default function DetailsPage({
       {!COINS.some(coin => coin.id === id) ? <p>No data found for {id}</p> : <Details />}
     </div>
   );
-}
-
-export async function getStaticPaths() {
-  const paths = COINS.map(coin => ({
-    params: { id: coin.id.toString() },
-  }));
-
-  return { paths, fallback: false };
 }

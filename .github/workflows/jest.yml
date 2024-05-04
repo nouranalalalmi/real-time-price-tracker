@@ -16,7 +16,7 @@ jobs:
           npm install jest@29.7.0
 
       - name: Run Jest
-        run: npm run test --ci --coverage .
+        run: TZ=Asia/Dubai npx jest --ci --coverage .
           --config jest.config.ts
 
       - name: Upload JUnit report
