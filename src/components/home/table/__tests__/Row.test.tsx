@@ -22,6 +22,7 @@ describe('Row', () => {
       prices: {
         BTC: {
           lastPrice: '50000',
+          priceChange: '250',
           priceChangePercent: '5',
         },
       },
@@ -46,6 +47,6 @@ describe('Row', () => {
     render(<Row asset={mockAsset} />);
 
     screen.getByText('BTC').click();
-    expect(mockRouter).toMatchObject({ pathname: '/1' });
+    expect(mockRouter).toMatchObject({ pathname: '/details/1' });
   });
 });

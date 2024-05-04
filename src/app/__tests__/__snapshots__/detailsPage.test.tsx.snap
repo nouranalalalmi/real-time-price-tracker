@@ -95,9 +95,76 @@ exports[`Details page matches snapshot 1`] = `
               />
             </div>
             <div
-              class="size-4 animate-spin rounded-full border-y-2 border-pink-500"
-              data-testid="spinner"
-            />
+              class="flex flex-col gap-y-4 text-left"
+            >
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Rank
+                </h2>
+                #
+                1
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Symbol
+                </h2>
+                BTC
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Market cap
+                </h2>
+                1,154,471,549,507.90
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Volume change (24hr)
+                </h2>
+                13,866,421,449.48
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Price
+                </h2>
+                $
+                58,623.43
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Price change (24hr)
+                </h2>
+                <div
+                  class="text-green-500"
+                >
+                  2.24
+                  %
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

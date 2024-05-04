@@ -18,12 +18,13 @@ export const Table = () => {
         setPrices({
           [asset.symbol]: {
             priceChangePercent: asset.priceChangePercent,
+            priceChange: asset.priceChange,
             lastPrice: asset.lastPrice,
           },
         });
       });
     }
-  }, [isLoading]);
+  }, [isLoading, data, setPrices]);
 
   return (
     <>
@@ -33,7 +34,8 @@ export const Table = () => {
             <tr className="text-left">
               <th>Asset</th>
               <th>Price</th>
-              <th>24hr change</th>
+              <th>Price change</th>
+              <th>Percent change (%)</th>
             </tr>
           </thead>
           <tbody>

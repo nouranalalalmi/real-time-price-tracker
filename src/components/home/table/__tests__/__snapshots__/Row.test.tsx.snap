@@ -42,6 +42,10 @@ exports[`Row should match snapshot 1`] = `
       50,000.00
     </td>
     <td>
+      $
+      250.00
+    </td>
+    <td>
       <div
         class="bg-green-100 text-green-500 w-fit rounded-xl px-2 py-1 text-xs font-semibold"
       >

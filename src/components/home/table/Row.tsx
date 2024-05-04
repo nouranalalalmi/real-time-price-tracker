@@ -13,7 +13,9 @@ export const Row = ({ asset }: AssetPriceInterface) => {
   const router = useRouter();
 
   return (
-    <tr className="cursor-pointer hover:bg-gray-100" onClick={() => router.push(`/${asset.id}`)}>
+    <tr
+      className="cursor-pointer hover:bg-gray-100"
+      onClick={() => router.push(`/details/${asset.id}`)}>
       <td className="flex items-center gap-x-2">
         <div className="relative size-9">
           <Image
@@ -31,6 +33,9 @@ export const Row = ({ asset }: AssetPriceInterface) => {
       </td>
       <td>
         <FormattedNumber prefix="$" value={price?.lastPrice} />
+      </td>
+      <td>
+        <FormattedNumber prefix="$" value={price?.priceChange} />
       </td>
       <td>
         <PriceChangeIndicator percent={price?.priceChangePercent} />
