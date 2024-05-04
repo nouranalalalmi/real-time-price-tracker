@@ -21,7 +21,14 @@ export const Overview = () => {
       <div className="flex flex-col gap-y-4 rounded-lg border bg-white p-4 shadow-sm">
         <div className="flex items-center gap-2 border-b">
           <h2 className="text-2xl capitalize">{id}</h2>
-          {logo && <Image src={`../${logo}`} width={25} height={25} alt="asset-logo" />}
+          {logo && (
+            <Image
+              src={`${process.env.BASE_PATH ?? ''}${logo}`}
+              width={25}
+              height={25}
+              alt="asset-logo"
+            />
+          )}
         </div>
         <div className="flex flex-col gap-y-4 text-left">
           <OverviewItem label="Rank">#{data?.rank}</OverviewItem>

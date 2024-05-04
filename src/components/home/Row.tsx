@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 import { RealTimePrice } from '@/components/realTimePrice/RealTimePrice';
@@ -19,13 +18,7 @@ export const Row = ({ asset }: AssetPriceInterface) => {
       onClick={() => router.push(`/details/${asset.id}`)}>
       <td className="flex items-center gap-x-2">
         <div className="relative size-9">
-          <Image
-            src={`.${asset.logo}`}
-            alt={asset.name}
-            layout="fill"
-            objectFit="contain"
-            objectPosition="center"
-          />
+          <img src={asset.logo} alt={asset.name} />
         </div>
         <div className="flex flex-col">
           <span className="text-lg uppercase">{asset.symbol}</span>
