@@ -103,6 +103,11 @@ exports[`Overview should render the asset details when data is loaded 1`] = `
             %
           </div>
         </div>
+        <p
+          class="text-xs font-semibold text-yellow-600"
+        >
+          *Refetched every 3 minutes
+        </p>
       </div>
     </div>
   </div>

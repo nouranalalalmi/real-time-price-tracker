@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
+import { RealTimePrice } from '@/components/realTimePrice/RealTimePrice';
 import { usePriceStore } from '@/stores/pricesStore';
 import { FormattedNumber } from '@/ui/formattedNumber/FormattedNumber';
 import { PriceChangeIndicator } from '@/ui/priceChangeIndicator/PriceChangeIndicator';
@@ -32,7 +33,7 @@ export const Row = ({ asset }: AssetPriceInterface) => {
         </div>
       </td>
       <td>
-        <FormattedNumber prefix="$" value={price?.lastPrice} />
+        <RealTimePrice id={asset.id} />
       </td>
       <td>
         <FormattedNumber prefix="$" value={price?.priceChange} />

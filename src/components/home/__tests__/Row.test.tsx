@@ -10,8 +10,8 @@ mockStore('@/stores/pricesStore');
 
 describe('Row', () => {
   const mockAsset = {
-    id: '1',
-    tickerId: 'btc',
+    id: 'bitcoin',
+    tickerId: 'btcusdt',
     logo: '/logo.png',
     name: 'Bitcoin',
     symbol: 'BTC',
@@ -20,7 +20,7 @@ describe('Row', () => {
   beforeEach(() => {
     usePriceStore.setState({
       prices: {
-        BTC: {
+        BTCUSDT: {
           lastPrice: '50000',
           priceChange: '250',
           priceChangePercent: '5',
@@ -39,6 +39,7 @@ describe('Row', () => {
 
     expect(screen.getByText('BTC')).toBeInTheDocument();
     expect(screen.getByText('Bitcoin')).toBeInTheDocument();
+    expect(screen.getByText('$250.00')).toBeInTheDocument();
     expect(screen.getByText('$50,000.00')).toBeInTheDocument();
     expect(screen.getByText('5.00%')).toBeInTheDocument();
   });
@@ -47,6 +48,6 @@ describe('Row', () => {
     render(<Row asset={mockAsset} />);
 
     screen.getByText('BTC').click();
-    expect(mockRouter).toMatchObject({ pathname: '/details/1' });
+    expect(mockRouter).toMatchObject({ pathname: '/details/bitcoin' });
   });
 });

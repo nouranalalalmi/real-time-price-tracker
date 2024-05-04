@@ -40,6 +40,7 @@ export const Overview = () => {
               <FormattedNumber suffix="%" value={data?.changePercent24Hr} />
             </div>
           </OverviewItem>
+          <p className="text-xs font-semibold text-yellow-600">*Refetched every 3 minutes</p>
         </div>
       </div>
     </div>

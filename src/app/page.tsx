@@ -1,4 +1,4 @@
-import { Table } from '@/components/home/table/Table';
+import { Table } from '@/components/home/Table';
 
 export default function HomePage() {
   return (

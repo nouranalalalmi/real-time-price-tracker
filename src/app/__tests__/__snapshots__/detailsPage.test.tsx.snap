@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Details page matches snapshot 1`] = `
+exports[`Details page renders details for bitcoin 1`] = `
 <div>
   <div
     class="flex flex-col gap-y-2"
@@ -164,15 +164,561 @@ exports[`Details page matches snapshot 1`] = `
                   %
                 </div>
               </div>
+              <p
+                class="text-xs font-semibold text-yellow-600"
+              >
+                *Refetched every 3 minutes
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <p
-      class="p-2 text-xs font-semibold text-yellow-600"
+    <p>
+      Real time price: 
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Details page renders details for cardano 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-y-2"
+  >
+    <a
+      class="w-fit text-sm font-semibold text-blue-500 hover:text-blue-700"
+      href="/"
     >
-      - Data is refetched every 3 minutes
+      ← back to live ticker
+    </a>
+    <div
+      class="flex w-full flex-col justify-between gap-6 md:flex-row"
+    >
+      <div
+        class="w-full"
+      >
+        <h1
+          class="pb-2 text-3xl font-semibold"
+        >
+          History
+        </h1>
+        <div
+          class="rounded-lg border bg-white p-2 shadow-sm"
+        >
+          <div
+            class="flex justify-end gap-2"
+          >
+            <button
+              class="border-current/30 rounded-lg border px-2 hover:bg-blue-50 bg-blue-100"
+              data-testid="range-1d"
+            >
+              1d
+            </button>
+            <button
+              class="border-current/30 rounded-lg border px-2 hover:bg-blue-50 false"
+              data-testid="range-1w"
+            >
+              1w
+            </button>
+            <button
+              class="border-current/30 rounded-lg border px-2 hover:bg-blue-50 false"
+              data-testid="range-1m"
+            >
+              1m
+            </button>
+            <button
+              class="border-current/30 rounded-lg border px-2 hover:bg-blue-50 false"
+              data-testid="range-1y"
+            >
+              1y
+            </button>
+          </div>
+          <canvas
+            height="150"
+            role="img"
+            width="300"
+          />
+        </div>
+      </div>
+      <div
+        class="w-full md:w-1/4"
+      >
+        <div
+          class="flex w-full flex-col"
+        >
+          <h1
+            class="pb-2 text-3xl font-semibold"
+          >
+            Overview
+          </h1>
+          <div
+            class="flex flex-col gap-y-4 rounded-lg border bg-white p-4 shadow-sm"
+          >
+            <div
+              class="flex items-center gap-2 border-b"
+            >
+              <h2
+                class="text-2xl capitalize"
+              >
+                cardano
+              </h2>
+              <img
+                alt="asset-logo"
+                data-nimg="1"
+                decoding="async"
+                height="25"
+                loading="lazy"
+                src="/_next/image?url=%2Fimages%2Fada.png&w=64&q=75"
+                srcset="/_next/image?url=%2Fimages%2Fada.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fada.png&w=64&q=75 2x"
+                style="color: transparent;"
+                width="25"
+              />
+            </div>
+            <div
+              class="flex flex-col gap-y-4 text-left"
+            >
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Rank
+                </h2>
+                #
+                1
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Symbol
+                </h2>
+                BTC
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Market cap
+                </h2>
+                1,154,471,549,507.90
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Volume change (24hr)
+                </h2>
+                13,866,421,449.48
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Price
+                </h2>
+                $
+                58,623.43
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Price change (24hr)
+                </h2>
+                <div
+                  class="text-green-500"
+                >
+                  2.24
+                  %
+                </div>
+              </div>
+              <p
+                class="text-xs font-semibold text-yellow-600"
+              >
+                *Refetched every 3 minutes
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>
+      Real time price: 
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Details page renders details for ethereum 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-y-2"
+  >
+    <a
+      class="w-fit text-sm font-semibold text-blue-500 hover:text-blue-700"
+      href="/"
+    >
+      ← back to live ticker
+    </a>
+    <div
+      class="flex w-full flex-col justify-between gap-6 md:flex-row"
+    >
+      <div
+        class="w-full"
+      >
+        <h1
+          class="pb-2 text-3xl font-semibold"
+        >
+          History
+        </h1>
+        <div
+          class="rounded-lg border bg-white p-2 shadow-sm"
+        >
+          <div
+            class="flex justify-end gap-2"
+          >
+            <button
+              class="border-current/30 rounded-lg border px-2 hover:bg-blue-50 bg-blue-100"
+              data-testid="range-1d"
+            >
+              1d
+            </button>
+            <button
+              class="border-current/30 rounded-lg border px-2 hover:bg-blue-50 false"
+              data-testid="range-1w"
+            >
+              1w
+            </button>
+            <button
+              class="border-current/30 rounded-lg border px-2 hover:bg-blue-50 false"
+              data-testid="range-1m"
+            >
+              1m
+            </button>
+            <button
+              class="border-current/30 rounded-lg border px-2 hover:bg-blue-50 false"
+              data-testid="range-1y"
+            >
+              1y
+            </button>
+          </div>
+          <canvas
+            height="150"
+            role="img"
+            width="300"
+          />
+        </div>
+      </div>
+      <div
+        class="w-full md:w-1/4"
+      >
+        <div
+          class="flex w-full flex-col"
+        >
+          <h1
+            class="pb-2 text-3xl font-semibold"
+          >
+            Overview
+          </h1>
+          <div
+            class="flex flex-col gap-y-4 rounded-lg border bg-white p-4 shadow-sm"
+          >
+            <div
+              class="flex items-center gap-2 border-b"
+            >
+              <h2
+                class="text-2xl capitalize"
+              >
+                ethereum
+              </h2>
+              <img
+                alt="asset-logo"
+                data-nimg="1"
+                decoding="async"
+                height="25"
+                loading="lazy"
+                src="/_next/image?url=%2Fimages%2Feth.png&w=64&q=75"
+                srcset="/_next/image?url=%2Fimages%2Feth.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Feth.png&w=64&q=75 2x"
+                style="color: transparent;"
+                width="25"
+              />
+            </div>
+            <div
+              class="flex flex-col gap-y-4 text-left"
+            >
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Rank
+                </h2>
+                #
+                1
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Symbol
+                </h2>
+                BTC
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Market cap
+                </h2>
+                1,154,471,549,507.90
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Volume change (24hr)
+                </h2>
+                13,866,421,449.48
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Price
+                </h2>
+                $
+                58,623.43
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Price change (24hr)
+                </h2>
+                <div
+                  class="text-green-500"
+                >
+                  2.24
+                  %
+                </div>
+              </div>
+              <p
+                class="text-xs font-semibold text-yellow-600"
+              >
+                *Refetched every 3 minutes
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>
+      Real time price: 
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Details page renders details for solana 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-y-2"
+  >
+    <a
+      class="w-fit text-sm font-semibold text-blue-500 hover:text-blue-700"
+      href="/"
+    >
+      ← back to live ticker
+    </a>
+    <div
+      class="flex w-full flex-col justify-between gap-6 md:flex-row"
+    >
+      <div
+        class="w-full"
+      >
+        <h1
+          class="pb-2 text-3xl font-semibold"
+        >
+          History
+        </h1>
+        <div
+          class="rounded-lg border bg-white p-2 shadow-sm"
+        >
+          <div
+            class="flex justify-end gap-2"
+          >
+            <button
+              class="border-current/30 rounded-lg border px-2 hover:bg-blue-50 bg-blue-100"
+              data-testid="range-1d"
+            >
+              1d
+            </button>
+            <button
+              class="border-current/30 rounded-lg border px-2 hover:bg-blue-50 false"
+              data-testid="range-1w"
+            >
+              1w
+            </button>
+            <button
+              class="border-current/30 rounded-lg border px-2 hover:bg-blue-50 false"
+              data-testid="range-1m"
+            >
+              1m
+            </button>
+            <button
+              class="border-current/30 rounded-lg border px-2 hover:bg-blue-50 false"
+              data-testid="range-1y"
+            >
+              1y
+            </button>
+          </div>
+          <canvas
+            height="150"
+            role="img"
+            width="300"
+          />
+        </div>
+      </div>
+      <div
+        class="w-full md:w-1/4"
+      >
+        <div
+          class="flex w-full flex-col"
+        >
+          <h1
+            class="pb-2 text-3xl font-semibold"
+          >
+            Overview
+          </h1>
+          <div
+            class="flex flex-col gap-y-4 rounded-lg border bg-white p-4 shadow-sm"
+          >
+            <div
+              class="flex items-center gap-2 border-b"
+            >
+              <h2
+                class="text-2xl capitalize"
+              >
+                solana
+              </h2>
+              <img
+                alt="asset-logo"
+                data-nimg="1"
+                decoding="async"
+                height="25"
+                loading="lazy"
+                src="/_next/image?url=%2Fimages%2Fsol.png&w=64&q=75"
+                srcset="/_next/image?url=%2Fimages%2Fsol.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fsol.png&w=64&q=75 2x"
+                style="color: transparent;"
+                width="25"
+              />
+            </div>
+            <div
+              class="flex flex-col gap-y-4 text-left"
+            >
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Rank
+                </h2>
+                #
+                1
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Symbol
+                </h2>
+                BTC
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Market cap
+                </h2>
+                1,154,471,549,507.90
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Volume change (24hr)
+                </h2>
+                13,866,421,449.48
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Price
+                </h2>
+                $
+                58,623.43
+              </div>
+              <div
+                class="flex flex-col gap-y-1 break-all text-xl text-gray-700"
+              >
+                <h2
+                  class="text-sm font-bold"
+                >
+                  Price change (24hr)
+                </h2>
+                <div
+                  class="text-green-500"
+                >
+                  2.24
+                  %
+                </div>
+              </div>
+              <p
+                class="text-xs font-semibold text-yellow-600"
+              >
+                *Refetched every 3 minutes
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>
+      Real time price: 
     </p>
   </div>
 </div>

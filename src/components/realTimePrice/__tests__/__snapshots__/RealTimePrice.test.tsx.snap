@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RealTimePrice renders correctly for bitcoin 1`] = `
+<div>
+  $
+  58,578.39
+</div>
+`;
+
+exports[`RealTimePrice renders correctly for cardano 1`] = `
+<div>
+  $
+  0.45
+</div>
+`;
+
+exports[`RealTimePrice renders correctly for ethereum 1`] = `
+<div>
+  $
+  2,971.99
+</div>
+`;
+
+exports[`RealTimePrice renders correctly for solana 1`] = `
+<div>
+  $
+  136.43
+</div>
+`;
