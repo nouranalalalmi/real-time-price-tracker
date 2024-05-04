@@ -12,9 +12,7 @@ export const chartOptions: ChartProps<'line'>['options'] = {
         text: 'Time',
       },
       ticks: {
-        autoSkip: true,
-        maxTicksLimit: 4,
-        align: 'start',
+        display: false,
       },
       grid: {
         display: false,
