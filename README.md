@@ -2,6 +2,8 @@
 
 RealTimePriceTracker is a streamlined, multi-page web application built with React that tracks and displays the real-time prices of Bitcoin, Ethereum, Solana, and Cardano. It showcases the ability to work with React, Next, APIs, WebSockets, routing, and unit tests.
 
+Every opened PR will deploy the project to the following URL: https://nouranalalalmi.github.io/real-time-price-tracker
+
 ## Features
 
 - Tracks and displays real-time prices of selected cryptocurrencies.
@@ -17,7 +19,7 @@ RealTimePriceTracker is a streamlined, multi-page web application built with Rea
 
 - Next.js (for routing and server-side rendering): Next.js is a React framework that provides features like server-side rendering, automatic code splitting, and simplified routing. It simplifies the setup of routing and can improve SEO and performance optimization.
 
-- WebSocket API (for real-time updates): The RealTimePriceTracker uses the Binance WebSocket API to fetch real-time data for selected cryptocurrencies. The application subscribes to the `24hrTicker` endpoint, which provides 24-hour rolling window ticker statistics. The `react-use-websocket` library is used to handle WebSocket connections and messages in a React context. This library provides a custom React Hook that makes it easy to connect to a WebSocket server, send messages, and listen for responses, all within the familiar context of React component lifecycle. The WebSocket connection is configured to automatically reconnect if the connection is lost, and to send periodic "pong" messages to keep the connection alive. (ref)[https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Individual-Symbol-Ticker-Streams]
+- WebSocket API (for real-time updates): The RealTimePriceTralcker uses the Binance WebSocket API to fetch real-time data for selected cryptocurrencies. The application subscribes to the `24hrTicker` endpoint, which provides 24-hour rolling window ticker statistics. The `react-use-websocket` library is used to handle WebSocket connections and messages in a React context. This library provides a custom React Hook that makes it easy to connect to a WebSocket server, send messages, and listen for responses, all within the familiar context of React component lifecycle. The WebSocket connection is configured to automatically reconnect if the connection is lost, and to send periodic "pong" messages to keep the connection alive. [reference](https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Individual-Symbol-Ticker-Streams)
 
 - Binance API (for initial data load): The Binance API is used to fetch the initial data load for the selected cryptocurrencies. This ensures that the application has some data to display before the WebSocket connection is established and starts providing real-time updates.
 
