@@ -24,7 +24,7 @@ export const Overview = () => {
           {logo && (
             <Image
               src={`${
-                process.env.NODE_ENV === 'production' ? '/real-time-price-tracker/' : ''
+                process.env.NODE_ENV === 'production' ? '/real-time-price-tracker' : ''
               }${logo}`}
               width={25}
               height={25}
