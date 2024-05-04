@@ -2,7 +2,6 @@
 const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
-  basePath: isProd ? '/real-time-price-tracker' : '',
   assetPrefix: isProd ? '/real-time-price-tracker/' : undefined,
 };
 
