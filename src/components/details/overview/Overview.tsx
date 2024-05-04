@@ -23,7 +23,9 @@ export const Overview = () => {
           <h2 className="text-2xl capitalize">{id}</h2>
           {logo && (
             <Image
-              src={`${process.env.BASE_PATH ?? ''}${logo}`}
+              src={`${
+                process.env.NODE_ENV === 'production' ? '/real-time-price-tracker/' : ''
+              }${logo}`}
               width={25}
               height={25}
               alt="asset-logo"
