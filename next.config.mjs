@@ -5,6 +5,7 @@ const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
+    path: isProd ? '/real-time-price-tracker/' : '/',
   },
   basePath: isProd ? '/real-time-price-tracker' : undefined,
   assetPrefix: isProd ? '/real-time-price-tracker/' : '/',
