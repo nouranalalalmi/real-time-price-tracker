@@ -19,3 +19,11 @@ export default function DetailsPage({
     </div>
   );
 }
+
+export async function getStaticPaths() {
+  const paths = COINS.map(coin => ({
+    params: { id: coin.id.toString() },
+  }));
+
+  return { paths, fallback: false };
+}
