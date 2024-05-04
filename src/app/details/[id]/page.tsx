@@ -11,17 +11,6 @@ export async function getStaticPaths() {
   return { paths, fallback: false };
 }
 
-export async function getStaticProps() {
-  // Fetch data based on params.id here
-  // ...
-
-  return {
-    props: {
-      // Your data here
-    },
-  };
-}
-
 export default function DetailsPage({
   params: { id },
 }: {
