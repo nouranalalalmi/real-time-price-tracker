@@ -2,12 +2,11 @@
 const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
+  basePath: isProd ? '/real-time-price-tracker' : '',
   output: 'export',
   images: {
     unoptimized: true,
   },
-  basePath: isProd ? '/real-time-price-tracker' : undefined,
-  // assetPrefix: isProd ? '/real-time-price-tracker/' : '/',
 };
 
 export default nextConfig;
