@@ -1,3 +1,4 @@
+import { CHART_COLORS } from '@/constants';
 import { useGetAssetHistory } from '@/services/details';
 
 import { getTransformedChartData } from '../getTransformedChartData';
@@ -16,7 +17,7 @@ describe('getTransformedChartData', () => {
 
     expect(result.labels).toEqual([]);
     expect(result.datasets[0].data).toEqual([]);
-    expect(result.datasets[0].backgroundColor).toEqual('rgba(239,68, 68, 0.1)');
+    expect(result.datasets[0].backgroundColor).toEqual(CHART_COLORS.TRANSPARENT_RED);
   });
 
   it('should return the correct border color', () => {
@@ -39,17 +40,17 @@ describe('getTransformedChartData', () => {
 
     // Check the border color when the y value is greater than the first data point
     expect(result?.datasets[0]?.segment?.borderColor({ p1: { parsed: { y: 200 } } })).toEqual(
-      'rgba(34,197,94)'
+      CHART_COLORS.GREEN
     );
 
     // Check the border color when the y value is less than the first data point
     expect(result?.datasets[0]?.segment?.borderColor({ p1: { parsed: { y: 50 } } })).toEqual(
-      'rgba(239,68, 68)'
+      CHART_COLORS.RED
     );
 
     // Check the border color when the y value is equal to the first data point
     expect(result?.datasets[0]?.segment?.borderColor({ p1: { parsed: { y: 100 } } })).toEqual(
-      'rgba(239,68, 68)'
+      CHART_COLORS.RED
     );
   });
 });

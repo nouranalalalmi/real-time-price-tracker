@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch-all"
+    "test": "TZ=Asia/Dubai jest --watch-all"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.32.0",

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
+import { RealTimePrice } from '@/components/realTimePrice/RealTimePrice';
 import { usePriceStore } from '@/stores/pricesStore';
 import { FormattedNumber } from '@/ui/formattedNumber/FormattedNumber';
 import { PriceChangeIndicator } from '@/ui/priceChangeIndicator/PriceChangeIndicator';
@@ -13,7 +14,9 @@ export const Row = ({ asset }: AssetPriceInterface) => {
   const router = useRouter();
 
   return (
-    <tr className="cursor-pointer hover:bg-gray-100" onClick={() => router.push(`/${asset.id}`)}>
+    <tr
+      className="cursor-pointer hover:bg-gray-100"
+      onClick={() => router.push(`/details/${asset.id}`)}>
       <td className="flex items-center gap-x-2">
         <div className="relative size-9">
           <Image
@@ -30,7 +33,10 @@ export const Row = ({ asset }: AssetPriceInterface) => {
         </div>
       </td>
       <td>
-        <FormattedNumber prefix="$" value={price?.lastPrice} />
+        <RealTimePrice id={asset.id} />
+      </td>
+      <td>
+        <FormattedNumber prefix="$" value={price?.priceChange} />
       </td>
       <td>
         <PriceChangeIndicator percent={price?.priceChangePercent} />

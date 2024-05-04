@@ -19,18 +19,22 @@ describe('Table', () => {
     expect(usePriceStore.getState().prices).toEqual({
       ADAUSDT: {
         lastPrice: '0.45400000',
+        priceChange: '0.01690000',
         priceChangePercent: '3.866',
       },
       BTCUSDT: {
         lastPrice: '58578.39000000',
+        priceChange: '1154.47000000',
         priceChangePercent: '2.010',
       },
       ETHUSDT: {
         lastPrice: '2971.99000000',
+        priceChange: '77.99000000',
         priceChangePercent: '2.695',
       },
       SOLUSDT: {
         lastPrice: '136.43000000',
+        priceChange: '13.67000000',
         priceChangePercent: '11.136',
       },
     });

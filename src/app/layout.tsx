@@ -22,7 +22,7 @@ export default function RootLayout({
       <body>
         <Providers>
           <WebSocketStatus />
-          <div className="flex min-h-screen flex-col p-5 md:p-24">{children}</div>
+          <div className="flex min-h-screen flex-col p-5 lg:p-24">{children}</div>
         </Providers>
       </body>
     </html>
