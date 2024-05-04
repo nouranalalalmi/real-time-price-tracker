@@ -7,7 +7,7 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: isProd ? '/real-time-price-tracker' : undefined,
-  assetPrefix: isProd ? '/real-time-price-tracker/' : '/',
+  // assetPrefix: isProd ? '/real-time-price-tracker/' : '/',
 };
 
 export default nextConfig;
