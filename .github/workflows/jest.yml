@@ -34,25 +34,18 @@ jobs:
 
       - name: Comment coverage report
         uses: romeovs/lcov-reporter-action@v0.2.16
-        if: always()
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           lcov-file: ./coverage/lcov.info
 
-  coverage_report:
-    name: Generate coverage report
-    needs: jest
+  coverage:
     runs-on: ubuntu-latest
+    needs: 'jest'
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      # ... Generate LCOV files or download it from a different job
-      - name: Setup LCOV
-        uses: hrishikesh-kadam/setup-lcov@v1
-      - name: Report code coverage
-        uses: zgosalvez/github-actions-report-lcov@v3
+      - name: Post coverage report
+        uses: romeovs/lcov-reporter-action@v0.3.1
         with:
-          coverage-files: ./coverage/lcov.info
-          artifact-name: code-coverage-report
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          update-comment: true
+          lcov-file: ./coverage/lcov.info
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+          delete-old-comments: true
