@@ -3,14 +3,6 @@ import Link from 'next/link';
 import { Details } from '@/components/details/Details';
 import { COINS } from '@/constants';
 
-export async function getStaticPaths() {
-  const paths = COINS.map(coin => ({
-    params: { id: coin.id.toString() },
-  }));
-
-  return { paths, fallback: false };
-}
-
 export default function DetailsPage({
   params: { id },
 }: {

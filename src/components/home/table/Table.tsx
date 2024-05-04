@@ -24,7 +24,7 @@ export const Table = () => {
         });
       });
     }
-  }, [isLoading]);
+  }, [isLoading, data, setPrices]);
 
   return (
     <>
