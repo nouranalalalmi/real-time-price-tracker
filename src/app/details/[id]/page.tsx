@@ -3,6 +3,12 @@ import Link from 'next/link';
 import { Details } from '@/components/details/Details';
 import { COINS } from '@/constants';
 
+export async function generateStaticParams() {
+  return COINS.map(coin => ({
+    id: coin.id,
+  }));
+}
+
 export default function DetailsPage({
   params: { id },
 }: {
