@@ -1,7 +1,9 @@
 import Home from '@/app/page';
 import { COINS } from '@/constants';
 
-import { render, screen } from '../../test-utils';
+import { render, screen } from '../../../test-utils';
+
+jest.mock('@/services/home');
 
 describe('Home page', () => {
   it('matches snapshot', () => {

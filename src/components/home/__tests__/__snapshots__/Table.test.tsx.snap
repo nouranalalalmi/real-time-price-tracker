@@ -19,7 +19,10 @@ exports[`Table should match snapshot 1`] = `
             Price
           </th>
           <th>
-            24hr change
+            Price change
+          </th>
+          <th>
+            Percent change (%)
           </th>
         </tr>
       </thead>
@@ -62,6 +65,10 @@ exports[`Table should match snapshot 1`] = `
           <td>
             $
             58,578.39
+          </td>
+          <td>
+            $
+            1,154.47
           </td>
           <td>
             <div
@@ -112,6 +119,10 @@ exports[`Table should match snapshot 1`] = `
             2,971.99
           </td>
           <td>
+            $
+            77.99
+          </td>
+          <td>
             <div
               class="bg-green-100 text-green-500 w-fit rounded-xl px-2 py-1 text-xs font-semibold"
             >
@@ -160,6 +171,10 @@ exports[`Table should match snapshot 1`] = `
             136.43
           </td>
           <td>
+            $
+            13.67
+          </td>
+          <td>
             <div
               class="bg-green-100 text-green-500 w-fit rounded-xl px-2 py-1 text-xs font-semibold"
             >
@@ -206,6 +221,10 @@ exports[`Table should match snapshot 1`] = `
           <td>
             $
             0.45
+          </td>
+          <td>
+            $
+            0.02
           </td>
           <td>
             <div

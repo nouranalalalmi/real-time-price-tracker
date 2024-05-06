@@ -2,27 +2,30 @@ import { ReadyState } from 'react-use-websocket';
 
 import { RangeEnum } from './services/types/details';
 
+const isProd = process.env.NODE_ENV === 'production';
+const prefix = isProd ? '/real-time-price-tracker' : '';
+
 export const COINS = [
   {
     id: 'bitcoin',
     tickerId: 'btcusdt',
     symbol: 'btc',
     name: 'Bitcoin',
-    logo: '/images/btc.png',
+    logo: `${prefix}/images/btc.png`,
   },
   {
     id: 'ethereum',
     tickerId: 'ethusdt',
     symbol: 'eth',
     name: 'Ethereum',
-    logo: '/images/eth.png',
+    logo: `${prefix}/images/eth.png`,
   },
   {
     id: 'solana',
     tickerId: 'solusdt',
     symbol: 'sol',
     name: 'Solana',
-    logo: '/images/sol.png',
+    logo: `${prefix}/images/sol.png`,
   },
   {
     id: 'cardano',
@@ -30,7 +33,7 @@ export const COINS = [
     symbol: 'ada',
     name: 'Cardano',
     ticker: '@ticker',
-    logo: '/images/ada.png',
+    logo: `${prefix}/images/ada.png`,
   },
 ];
 

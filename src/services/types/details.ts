@@ -25,6 +25,7 @@ export interface GetAssetHistoryPayload {
   range: RangeEnum;
 }
 
+/* eslint-disable no-unused-vars */
 export enum RangeEnum {
   DAY = '1d',
   WEEK = '1w',

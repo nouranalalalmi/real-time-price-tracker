@@ -6,12 +6,12 @@
  */
 
 export const formatToLocaleString = (value: number | string | undefined): string => {
-  // If the value is undefined or cannot be converted to a number, return '-'
-  if (value === undefined || isNaN(Number(value))) {
+  // If the value is empty or cannot be converted to a number, return '-'
+  if (value === '' || isNaN(Number(value))) {
     return '-';
   }
   // Convert the value to a number and format it as a locale string with two decimal places
-  return Number(value).toLocaleString(undefined, {
+  return Number(value).toLocaleString('en-US', {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   });

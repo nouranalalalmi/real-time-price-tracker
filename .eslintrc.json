@@ -10,6 +10,7 @@
   ],
   "rules": {
     "tailwindcss/no-custom-classname": "off",
+    "no-unused-vars": "error",
     "import/order": [
       "error",
       {
