@@ -20,8 +20,8 @@ export const getTransformedChartData = (
         backgroundColor:
           // compare the last data point with the first, if it is is greater than the first, then it is green, else red
           dataPoints && dataPoints.slice(-1)[0] >= dataPoints[0]
-            ? CHART_COLORS.TRANSPARENT_GREEN
-            : CHART_COLORS.TRANSPARENT_RED,
+          ? ctx => getGradient(ctx.chart.ctx, CHART_COLORS.GREEN, CHART_COLORS.TRANSPARENT_WHITE)
+          : ctx => getGradient(ctx.chart.ctx, CHART_COLORS.RED, CHART_COLORS.TRANSPARENT_WHITE),
         segment: {
           borderColor: ctx => {
             // compare each point with the first point, if it is greater than the first, then it is green, else red
@@ -32,3 +32,10 @@ export const getTransformedChartData = (
     ],
   };
 };
+
+const getGradient = (ctx: CanvasRenderingContext2D, colorFrom: string, colorTo: string) => {
+  const gradient = ctx.createLinearGradient(0, 0, 0, ctx.canvas.height * 0.5)
+  gradient.addColorStop(0, colorFrom)
+  gradient.addColorStop(1, colorTo);
+  return gradient
+}
