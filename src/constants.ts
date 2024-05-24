@@ -57,4 +57,5 @@ export const CHART_COLORS = {
   RED: 'rgba(239,68, 68)',
   TRANSPARENT_GREEN: 'rgba(34,197,94, 0.1)',
   TRANSPARENT_RED: 'rgba(239,68, 68, 0.1)',
+  TRANSPARENT_WHITE: 'rgba(255,255,255, 0.1)',
 };
